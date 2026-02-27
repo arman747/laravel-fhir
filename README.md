@@ -86,8 +86,6 @@ Route::prefix('fhir/R4')
             ->group(function () {
                 Route::get('/jwks/{clientId}', [UserController::class, 'jwks'])->name('EpicFhir.jwks');
 
-                Route::get('/SmartOnFhir/{clientId}', [UserController::class, 'SmartOnFhir'])->name('EpicFhir.SmartOnFhir');
-
                 Route::get('/Callback', [UserController::class, 'Callback'])->name('EpicFhir.Callback');
 });
 ```
